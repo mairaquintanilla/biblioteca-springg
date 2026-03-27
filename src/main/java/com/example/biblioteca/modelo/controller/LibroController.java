@@ -26,15 +26,15 @@ public class LibroController {
     @Autowired
     private LibroService libroService;
 
-    @GetMapping("")
+    @GetMapping
     public List<Libro> listarLibros() {
         return libroService.getAllLibros();
     }
-    @PostMapping("path")
+    @PostMapping
     public Libro agregarLibro(@RequestBody Libro libro){
         return libroService.saveLibro(libro);
     }
-    @GetMapping("path")
+    @GetMapping("{id}")
     public Libro buscarLibro(@PathVariable int id){
         return libroService.getlibroId(id);
     }
