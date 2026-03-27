@@ -25,7 +25,7 @@ public class LibroService {
     public Libro updateLibro(Libro libro){
         return libroRepository.actualizar(libro);
     }
-    public String deleteLibro(Libro libro){
+    public String deleteLibro(int id){
         libroRepository.eliminar(id);
         return "Producto eliminado";
 
